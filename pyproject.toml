@@ -1,0 +1,19 @@
+[build-system]
+requires = ['setuptools>=61']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name = 'envshield'
+version = '0.1.0'
+description = 'Scan environment variables and .env files for leaked secrets.'
+readme = 'README.md'
+requires-python = '>=3.9'
+license = {text = 'MIT'}
+authors = [{name = 'envshield contributors'}]
+
+[project.scripts]
+envshield = 'envshield.cli:main'
+
+[tool.setuptools.packages.find]
+where = ['.']
+include = ['envshield*']
